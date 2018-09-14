@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Roboto+Mono:500,700');
+@import 'variables';
+@import 'mixines';
+
+@import 'button-booking-room';
+@import 'button-map';
+@import 'button-membership';
+@import 'button-resident';
+@import 'navigation';
+@import 'hello';
+@import 'menu';
+@import 'booking-workspace';
+@import 'resident-card';
+@import 'button-close';
+@import 'loader';
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+.page {
+	width: 100%;
+    min-height: 100vh;
+	background-color: $BLACK;
+	&--fs {
+		@extend %flex-row-fs;
+	}
+	&--c {
+		@extend %flex-row-c;
+		align-items: center;
+	}
+}

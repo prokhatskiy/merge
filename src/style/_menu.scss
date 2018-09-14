@@ -1,0 +1,161 @@
+.menu {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+	@extend %flex-row;
+	&__info-block {
+		&--calendar {
+			margin-bottom: 55px;
+		}
+		&--location {
+			margin-bottom: 26px;
+		}
+		&--phone {
+			margin-bottom: 33px;
+		}
+		&--mail {
+			margin-bottom: 215px;
+		}
+	}
+	&__text {
+		font-family: $base-font;
+		font-size: 13px;
+		color: white;
+		letter-spacing: 0.9px;
+		text-align: left;
+		line-height: 1.69;
+		&--above {
+			font-weight: 400;
+		}
+		&--under {
+			font-weight: 700;
+		}
+		&--loc {
+			line-height: 1.85;
+		}
+		&--margin {
+			margin-bottom: 35px;
+		}
+	}
+	&__contact {
+		font-family: $base-font;
+		font-size: 13px;
+		color: $MERGE;
+		letter-spacing: 0.9px;
+		text-align: left;
+		font-weight: 500;
+		text-decoration: none;
+		margin-bottom: 35px;
+		&:hover {
+			opacity: 0.7;
+			transition: opacity ease-in-out 0.2s;
+		}
+	}
+}
+
+.menu-col {
+		width: 20%;
+		min-width: 189px;
+		border-right: 0.5px solid $LINE;
+		@extend %flex-col;
+		justify-content: center;
+
+		&:last-child {
+			border-right: none;
+		}
+		&__inner {
+			min-height: 400px;
+			height: 430px;
+			max-height: 100%;
+			flex-shrink: 1;
+			@extend %flex-col;
+			justify-content: space-between;
+		}
+		&--button {
+			margin-bottom: 69px;
+		}
+}
+
+.menu-inner {
+	
+    padding-left: 40px;
+    @extend %flex-row-fs;
+    width: 100%;
+    
+    &:hover .button-close__description {
+        color: $GREY;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+
+.menu-list {
+    list-style: none;
+    margin-bottom: 67px;
+    &__item {
+        margin-bottom: 24px;
+    }
+    &__link {
+        text-decoration: none;
+        font-family: $title-font;
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+        white-space: nowrap;
+        &:hover {
+            color: $MERGE;
+            transition: color ease-in-out 0.2s;
+        }
+        &:not(:hover) {
+            transition: color ease-in-out 0.2s;
+        }
+    }
+}
+
+.lang {
+    font-family: $base-font;
+    font-weight: 700;
+    font-size: 10px;
+    color: $GREY;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 16px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__wrapper {
+        @extend %flex-row-fs;
+    }
+    &:hover {
+        color: white;
+        transition: color ease-in-out 0.2s;
+    }
+    &:not(:hover) {
+        transition: color ease-in-out 0.2s;
+    }
+}
+
+.menu-image {
+    fill: white;
+    height: 24px;
+    width: 24px;
+    margin-bottom: 20px;
+}
+
+.button-close {
+	&--menu {
+		margin-right: 16px;
+	}
+	&__description {
+        font-family: $base-font;
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+    }
+}
+
+
+

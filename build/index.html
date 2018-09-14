@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<title>Merge</title>
+</head>
+
+<body>
+	<section class="loader">
+		<h1 class="loader__title">MERGE</h1>
+		<p class="loader__percent"></p>
+	</section>
+	<div class="page page--c">
+		<nav class="navigation navigation--border">
+			<svg class="logo nav-toggle">
+				<use xlink:href='#logo' />
+			</svg>
+			<section class="button-menu__wrapper">
+				<div class="button-menu__cloud nav-toggle">MENU</div>
+				<button id='go-to-menu' class="button-menu">
+					<div class="button-menu__item"></div>
+				</button>
+			</section>
+			<section class="social__wrapper nav-toggle">
+				<a href="#" class="social">
+					<svg class="social__img">
+						<use xlink:href='#telegram' />
+					</svg>
+				</a>
+				<a href="#" class="social">
+					<svg class="social__img">
+						<use xlink:href='#facebook' />
+					</svg>
+				</a>
+				<a href="#" class="social">
+					<svg class="social__img">
+						<use xlink:href='#instagram' />
+					</svg>
+				</a>
+			</section>
+		</nav>
+		<main class="main">
+			<section class="hello component">
+				<div class="hello__wrapper hello__wrapper--row hello__wrapper--start-title">
+					<h1 class="hello__title hello__title--start">
+						Hello! We’re
+					</h1>
+					<p class="hello__title hello__title--merge">
+						MERGE
+					</p>
+				</div>
+
+				<h2 class="hello__subtitle hello__subtitle--start">
+					COWORKING IN THE CENTRE OF KREMENCHUK
+				</h2>
+				<div class="hello__wrapper hello__wrapper--row hello__wrapper--start-link">
+					<a href="" class="link link--main">
+						<svg class='link__img link__img--main'>
+							<use xlink:href='#videocamera' />
+						</svg>
+						<p class="link__text link__text--main">
+							how to get to the MERGE
+						</p>
+					</a>
+					<a href="" class="link link--main">
+						<svg class='link__img link__img--main'>
+							<use xlink:href='#infoborder' />
+						</svg>
+						<p class="link__text link__text--main">
+							PRICES AND WORKING HOURS
+						</p>
+					</a>
+				</div>
+				<p class="hello__description hello__description--start">
+					We offer
+					<a class='hello__description--link'>comfortable conditions</a>
+					for remote work and we are dreaming to organize
+					<a href='#' class='hello__description--link'>Merge Community</a>
+					. Also, we have a
+					<a href='#' class='hello__description--link'>meeting room</a>
+					with a 50 inch TV. We regularly organize
+					<a href='#' class='hello__description--link'>lectures and workshops</a>
+					in various specialties.
+				</p>
+				<div class="hello__wrapper hello__wrapper--row">
+					<button class="button-membership button-membership--hello">
+						<p class='button-membership__text'>
+							BECOME A MEMBER
+							<svg class='button-membership__img'>
+								<use xlink:href='#arrow-button' />
+							</svg>
+						</p>
+					</button>
+					<button class="button-book-room">
+						<p class='button-book-room__text'>
+							book a meeting room
+							<svg class='button-book-room__img'>
+								<use xlink:href='#arrow-button' />
+							</svg>
+						</p>
+					</button>
+
+				</div>
+			</section>
+
+			<section class="booking-workspace bw component" style="display: none;">
+				<div class="bw-wrapper bw-wrapper--fs bw-wrapper--top-line">
+					<button class="bw-button-back">
+						<svg class="bw-button-back__img">
+							<use xlink:href='#arrow-left' />
+						</svg>
+					</button>
+					<p class="bw-button-back__text">go back</p>
+				</div>
+				<h1 class="bw-title">Booking of the
+					workplace
+				</h1>
+				<div class="bw-wrapper bw-wrapper--sb bw-wrapper--middle-line">
+					<button class="bw-button-choice">
+						<p class="bw-button-choice__title">Month</p>
+						<a class="bw-button-choice__subtitle previewResidentCard">Resident card</a>
+						<p class="bw-button-choice__price">1000</p>
+						<svg class="bw-button-choice__img previewResidentCard">
+							<use xlink:href='#infoborder' />
+						</svg>
+					</button>
+					<button class="bw-button-choice">
+						<p class="bw-button-choice__title">Week</p>
+						<p class="bw-button-choice__price">400</p>
+						<svg class="bw-button-choice__img">
+							<use xlink:href='#infoborder' />
+						</svg>
+					</button>
+					<button class="bw-button-choice">
+						<p class="bw-button-choice__title">Day</p>
+						<p class="bw-button-choice__price">80</p>
+						<svg class="bw-button-choice__img">
+							<use xlink:href='#infoborder' />
+						</svg>
+					</button>
+				</div>
+				<div class="bw-wrapper-col bw-wrapper-col--form">
+					<form action="" name='booking-form' id='book-form' class="bw-form">
+						<div class="bw-wrapper bw-wrapper--sb bw-wrapper--label-margin">
+							<div class="bw-wrapper-col">
+								<label for="full-name-label" class="bw-label">FULL NAME*</label>
+								<input id='full-name-label' required autocomplete='on' type="text" class="bw-input" placeholder="Андрій Малишко">
+							</div>
+							<div class="bw-wrapper-col">
+								<label for="phone-label" class="bw-label">Phone*</label>
+								<input id='phone-label' required autocomplete='on' type="tel" class="bw-input" placeholder="+38 (000) 000 00-00">
+							</div>
+						</div>
+						<div class="bw-wrapper bw-wrapper--sb">
+							<div class="bw-wrapper-col">
+								<label for="email-label" class="bw-label">E-mail*</label>
+								<input id='email-label' required autocomplete='on' type="email" class="bw-input" placeholder="example@mail.com">
+							</div>
+							<div class="bw-wrapper-col">
+								<label for="career-label" class="bw-label">career</label>
+								<input id='career-label' type="text" autocomplete='on' class="bw-input" placeholder="Програміст на Джава">
+							</div>
+						</div>
+					</form>
+				</div>
+				<p class="bw-form__description">* — Required fields</p>
+				<div class="bw-wrapper bw-wrapper--sb bw-wrapper--bottom-line">
+					<p class="bw-price">
+						Price:
+						<span class="bw-price__sum">1000</span>
+					</p>
+					<button class="bw-button-apply" form='book-form'>apply</button>
+				</div>
+			</section>
+		</main>
+		<section class="menu component" style="display: none;">
+			<div class="menu-col menu-col--button">
+				<div class="menu-inner">
+					<!-- TODO: MENU BUTTON -->
+					<button id='back-to-home' class="button-close button-close--menu">
+						<div class="button-close__item button-close__item--menu"></div>
+						<svg class='button-close__img button-close__img--menu'>
+							<use xlink:href='#close' />
+						</svg>
+					</button>
+					<p class="button-close__description button-close__description--menu">
+						CLOSE
+					</p>
+				</div>
+			</div>
+			<div class="menu-col">
+				<ul class="menu-list">
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__link">
+							Merge
+						</a>
+					</li>
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__link">
+							Coworking space
+						</a>
+					</li>
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__link">
+							Meeting Room
+						</a>
+					</li>
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__link">
+							Events
+						</a>
+					</li>
+					<li class="menu-list__item">
+						<a href="#" class="menu-list__link">
+							About us
+						</a>
+					</li>
+				</ul>
+				<div class="lang__wrapper">
+					<a href="#" class="lang">
+						UA
+					</a>
+					<a href="#" class="lang">
+						RU
+					</a>
+					<a href="#" class="lang">
+						EN
+					</a>
+				</div>
+			</div>
+			<div class="menu-col"></div>
+			<div class="menu-col">
+				<div class="menu-col__inner">
+					<div class="menu__info-block menu__info-block--calendar">
+						<div class="menu-image__wrapper">
+							<svg class="menu-image">
+								<use xlink:href='#calendar' />
+							</svg>
+						</div>
+						<p class="menu__text menu__text--above">
+							MON—FRI:
+						</p>
+						<p class="menu__text menu__text--under menu__text--margin">
+							9:00 – 20:00
+						</p>
+						<p class="menu__text menu__text--above">
+							SAT, SUN:
+						</p>
+						<p class="menu__text menu__text--under">
+							10:00 – 18:00
+						</p>
+					</div>
+					<div class="menu__info-block menu__info-block--location">
+						<div class="menu-image__wrapper">
+							<svg class="menu-image">
+								<use xlink:href='#location' />
+							</svg>
+						</div>
+						<p class="menu__text menu__text--above menu__text--locate">
+							Kremenchug
+						</p>
+						<p class="menu__text menu__text--under menu__text--locate">
+							Nebesna Sotnia st. 17А
+							“Proletarsky”
+						</p>
+					</div>
+
+					<!-- TODO: BUTTON COMPONENT -->
+					<button class="button-map">
+						<p class='button-map__text'>
+							VIEW ON THE MAP
+							<svg class='button-map__img'>
+								<use xlink:href='#arrow-right-up' />
+							</svg>
+						</p>
+					</button>
+				</div>
+			</div>
+			<div class="menu-col">
+				<div class="menu-col__inner">
+					<div class="menu__info-block menu__info-block--phone">
+						<div class="menu-image__wrapper">
+							<svg class="menu-image">
+								<use xlink:href='#phone' />
+							</svg>
+						</div>
+						<a href="callto: 0970313451" class="menu__contact menu__contact--phone">
+							097 031 3451
+						</a>
+					</div>
+					<div class="menu__info-block menu__info-block--mail">
+						<div class="menu-image__wrapper">
+							<svg class="menu-image">
+								<use xlink:href='#mail' />
+							</svg>
+						</div>
+						<a href="mailto: hello@merge.place" class="menu__contact menu__contact--mail">
+							hello@merge.place
+						</a>
+					</div>
+					<button class="button-membership">
+						<p class='button-membership__text'>
+							BECOME A MEMBER
+							<svg class='button-membership__img'>
+								<use xlink:href='#arrow-button' />
+							</svg>
+						</p>
+					</button>
+				</div>
+				<!-- TODO: BUTTON COMPONENT -->
+			</div>
+		</section>
+		<section class="resident-card rc component" style="display: none;">
+			<div class="rc-container">
+				<h2 class="rc-title">Resident Card</h2>
+				<p class="rc-description">Access for the Month</p>
+
+				<div class="rc-inner-line">
+					<div class="rc-row rc-row--notmarg">
+						<svg class="rc-image">
+							<use xlink:href='#meeting-room' />
+						</svg>
+						<p class="rc-caption">1 hour two times per week of Meeting Room's using is free</p>
+					</div>
+					<div class="rc-row rc-row--notmarg">
+						<svg class="rc-image">
+							<use xlink:href='#lecture' />
+						</svg>
+						<p class="rc-caption">Free accessment to paid events in Merge</p>
+					</div>
+				</div>
+				<div class="rc-grid">
+					<div class="rc-col">
+						<div class="rc-row">
+							<svg class="rc-image">
+								<use xlink:href='#wifi' />
+							</svg>
+							<p class="rc-caption">Super-fast Internet</p>
+						</div>
+						<div class="rc-row">
+							<svg class="rc-image">
+								<use xlink:href='#printer' />
+							</svg>
+							<p class="rc-caption">Wireless Printer/ Scanner/ Copier</p>
+						</div>
+						<div class="rc-row">
+							<svg class="rc-image">
+								<use xlink:href='#microwave' />
+							</svg>
+							<p class="rc-caption">Kitchen with a microvawe and fridge</p>
+						</div>
+					</div>
+					<div class="rc-col">
+						<div class="rc-row">
+							<svg class="rc-image">
+								<use xlink:href='#cofee' />
+							</svg>
+							<p class="rc-caption">Unlimited coffee, tea, snacks</p>
+						</div>
+						<div class="rc-row">
+							<svg class="rc-image">
+								<use xlink:href='#shower' />
+							</svg>
+							<p class="rc-caption">Shower</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="rc-inner-col">
+					<p class="rc-price">
+						Price:
+						<span class="rc-price__sum">1000</span>
+					</p>
+					<button class="button-resident">
+						<p class='button-resident__text'>
+							BECOME A RESIDENT
+							<svg class='button-resident__img'>
+								<use xlink:href='#arrow-button' />
+							</svg>
+						</p>
+					</button>
+				</div>
+				<button class='rc-close'>
+					<svg class="rc-close__img">
+						<use xlink:href='#close-card' />
+					</svg>
+				</button>
+			</div>
+		</section>
+	</div>
+	<svg style="display: none;">
+		<symbol id='logo' width="31px" height="40px" viewBox="0 0 31 40">
+			<path fill-rule="evenodd" d="M20.4593069,32.8365086 L23.8888332,29.1227295 L31,36.2862209 L27.570731,40 L20.4593069,32.8365086 Z M15.4625816,0 L26.0850832,10.7005349 L18.0964043,10.7005349 L18.0964043,25.4662469 L3.77682656,39.9891419 L0,36.2971308 L12.693955,23.3086219 L12.693955,10.7005349 L4.89641986,10.7005349 L15.4625816,0 Z"
+			 id="Combined-Shape"></path>
+		</symbol>
+		<symbol id='menu' width="24px" height="24px" viewBox="0 0 24 24">
+			<path d="M12,11 L20,11 L20,13 L12,13 L12,11 Z M8,6 L20,6 L20,8 L8,8 L8,6 Z M4,16 L20,16 L20,18 L4,18 L4,16 Z" id="Combined-Shape"
+			 transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "></path>
+		</symbol>
+		<symbol id='close' viewBox="0 0 24 24">
+			<polygon id="Shape" points="19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12"></polygon>
+		</symbol>
+
+		<symbol id='videocamera' width="16px" height="16px" viewBox="0 0 24 24">
+			<path d="M17,10.5 L17,7 C17,6.45 16.55,6 16,6 L4,6 C3.45,6 3,6.45 3,7 L3,17 C3,17.55 3.45,18 4,18 L16,18 C16.55,18 17,17.55 17,17 L17,13.5 L21,17.5 L21,6.5 L17,10.5 L17,10.5 Z"
+			 id="Shape"></path>
+		</symbol>
+		<symbol id='infoborder' width="16px" height="16px" viewBox="0 0 24 24">
+			<path d="M11,17 L13,17 L13,11 L11,11 L11,17 L11,17 Z M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 L12,2 Z M12,20 C7.59,20 4,16.41 4,12 C4,7.59 7.59,4 12,4 C16.41,4 20,7.59 20,12 C20,16.41 16.41,20 12,20 L12,20 Z M11,9 L13,9 L13,7 L11,7 L11,9 L11,9 Z"
+			 id="Shape"></path>
+		</symbol>
+		<symbol id='arrow-button' width="12" height="12">
+			<path stroke-width="1" stroke-miterlimit="4" transform="matrix(0.685894 0.685894 -0.685894 0.685894 6.45996 0.409277)"
+			 d="M2.66654 0L2.66654 1.06667L6.18121 1.06667L-0.00012207 7.248L0.751878 8L6.93321 1.81867L6.93321 5.33333L7.99988 5.33333L7.99988 0L2.66654 0L2.66654 1.06667L6.18121 1.06667L-0.00012207 7.248L0.751878 8L6.93321 1.81867L6.93321 5.33333L7.99988 5.33333L7.99988 0L2.66654 0Z" />
+		</symbol>
+		<symbol id='telegram' width="16px" height="16px" viewBox="0 0 448 512">
+			<path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+		</symbol>
+		<symbol id='facebook' width="16px" height="16px" viewBox="0 0 264 512">
+			<path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
+		</symbol>
+		<symbol id='instagram' width="16px" height="16px" viewBox="0 0 448 512">
+			<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+		</symbol>
+		<symbol id='arrow-right-up' width="12" height="12"" viewBox=" 0 0 24 24">
+			<path fill-rule="evenodd" d="M10 6v1.6h5.272L6 16.872 7.128 18 16.4 8.728V14H18V6z" />
+		</symbol>
+		<symbol id='calendar' width="24" height="24" viewBox="0 0 24 24">
+			<path fill-rule="nonzero" d="M19 20H5V9h14v11zM16 2v2H8V2H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V2h-2zm1 11h-5v5h5v-5z" />
+		</symbol>
+		<symbol id='mail' width="24" height="24" viewBox="0 0 24 24">
+			<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+		</symbol>
+		<symbol id='phone' width="24" height="24" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+		</symbol>
+		<symbol id='location' width="24" height="24" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+		</symbol>
+		<symbol id='arrow-left' width="17" height="17">
+			<path stroke="none" transform="matrix(-0.664679 0.664682 0.664682 0.664679 8.66016 0.303762)" d="M4 0L4 1.6L9.272 1.6L0 10.872L1.128 12L10.4 2.728L10.4 8L12 8L12 0L4 0L4 1.6L9.272 1.6L0 10.872L1.128 12L10.4 2.728L10.4 8L12 8L12 0L4 0Z" />
+		</symbol>
+
+		<symbol id='close-card' width="24" height="24" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+		</symbol>
+		<symbol id='microwave' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="nonzero" d="M39.26 7H.74a.741.741 0 0 0-.74.74v23.704c0 .41.332.741.74.741h2.964a.74.74 0 1 0 0 1.482h2.963a.74.74 0 1 0 0-1.482h26.666a.74.74 0 1 0 0 1.482h2.963a.74.74 0 1 0 0-1.482h2.963a.74.74 0 0 0 .741-.74V7.74A.74.74 0 0 0 39.26 7zm-.741 23.704H1.48V8.48H38.52v22.223zM3.704 29.222h22.222a.74.74 0 0 0 .74-.74V10.703a.74.74 0 0 0-.74-.741H3.704a.741.741 0 0 0-.741.74v17.778c0 .41.332.741.74.741zm.74-17.778h20.741v16.297H4.445V11.444zm18.519 4.445a.74.74 0 0 0-.74.74v5.927a.74.74 0 1 0 1.48 0V16.63a.74.74 0 0 0-.74-.741zm5.926-5.185v2.963h7.407v-2.963H28.89zm2.963 4.444v1.482h1.481v-1.482h-1.481zm2.963 0v1.482h1.481v-1.482h-1.481zm-5.926 0v1.482h1.481v-1.482H28.89zm2.963 2.963v1.482h1.481V18.11h-1.481zm2.963 0v1.482h1.481V18.11h-1.481zm-5.926 0v1.482h1.481V18.11H28.89zm2.963 11.111a3.708 3.708 0 0 0 3.704-3.703 3.708 3.708 0 0 0-3.704-3.704 3.708 3.708 0 0 0-3.704 3.704 3.708 3.708 0 0 0 3.704 3.703zm-.74-5.789v2.086a.74.74 0 1 0 1.48 0v-2.086a2.219 2.219 0 0 1 1.482 2.086 2.225 2.225 0 0 1-2.222 2.222 2.225 2.225 0 0 1-2.222-2.222c0-.965.621-1.779 1.481-2.086zM6.666 15.89c.19 0 .379-.073.523-.217l1.482-1.482a.74.74 0 1 0-1.048-1.047l-1.481 1.481a.74.74 0 0 0 .524 1.265zm5.402-2.746l-1.482 1.481a.74.74 0 1 0 1.048 1.048l1.481-1.482a.74.74 0 1 0-1.047-1.047zm-2.963 2.963l-2.963 2.963a.74.74 0 1 0 1.047 1.047l2.963-2.963a.74.74 0 1 0-1.047-1.047z" />
+		</symbol>
+		<symbol id='printer' width="40" height="40" viewBox="0 0 40 40">
+			<path fill-rule="nonzero" d="M5 33.35h4.575v3.675c0 .45.3.75.75.75h19.35c.45 0 .75-.3.75-.75V33.35H35c2.384 0 3-.74 3-3V18.2c0-2.166-.759-3-3-3h-4.575V2.975c0-.45-.3-.75-.75-.75h-19.35c-.45 0-.75.3-.75.75V15.2H5c-2.464 0-3 .798-3 3v12.225c0 2.377.69 2.925 3 2.925zm23.925 2.925h-17.85V29.9h17.85v6.375zm-17.85-32.55h17.85V15.2h-17.85V3.725zM3.5 18.2c0-1.363.235-1.5 1.5-1.5h30c1.293 0 1.5 0 1.5 1.5v12.225c0 1.132 0 1.5-1.5 1.5h-4.575v-1.95h1.2c.45 0 .75-.3.75-.75s-.3-.75-.75-.75H8.375c-.45 0-.75.3-.75.75s.3.75.75.75h1.2v1.95H5c-1.5 0-1.5 0-1.5-1.5V18.2zm21.675 5.7H32.3c.45 0 .75-.3.75-.75v-3.225c0-.45-.3-.75-.75-.75h-7.125c-.45 0-.75.3-.75.75v3.225c0 .375.3.75.75.75zm.75-3.3h5.625v1.725h-5.625V20.6zm-.15-13.275c.45 0 .75.3.75.75s-.3.75-.75.75H14c-.45 0-.75-.3-.75-.75s.3-.75.75-.75h11.775zm0 3.9c.45 0 .75.3.75.75s-.3.75-.75.75H14c-.45 0-.75-.3-.75-.75s.3-.75.75-.75h11.775z" />
+		</symbol>
+		<symbol id='cofee' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="nonzero" d="M36.798 9.53c.382 0 .692-.31.692-.692V2.692A.692.692 0 0 0 36.798 2H2.795a.692.692 0 0 0-.693.692v6.146c0 .382.31.692.693.692h2.482v4.457h-2.43a.692.692 0 0 0-.693.692v2.663c0 .383.31.693.692.693h2.431v11.721H2.692a.692.692 0 0 0-.692.692v6.145c0 .382.31.693.692.693h34.004c.382 0 .692-.31.692-.693v-6.145a.693.693 0 0 0-.692-.692H34.52V9.53h2.278zM3.488 3.385h32.618v4.76H3.487v-4.76zm12.29 6.145h8.038v7.428h-8.039V9.53zm-9.116 0h7.73v5.891h-2.898v-.742a.692.692 0 0 0-.692-.692h-4.14V9.53zm-3.123 5.842h6.57v1.278H3.54v-1.278zm32.464 20.53H3.385V31.14h32.618v4.76zm-19.5-9.596v-2.627H23.3v2.627c0 1.672-1.524 3.032-3.398 3.032s-3.399-1.36-3.399-3.032zm16.633 3.45H22.88c1.098-.81 1.805-2.054 1.805-3.45v-3.32a.693.693 0 0 0-.693-.692h-8.18a.692.692 0 0 0-.693.693v3.319c0 1.395.706 2.64 1.804 3.45H6.662V18.035h4.14c.382 0 .692-.31.692-.693v-.536h2.899v.844c0 .382.31.692.692.692h9.423c.382 0 .692-.31.692-.692V9.53h7.935v20.226z" />
+		</symbol>
+		<symbol id='wifi' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="nonzero" d="M3.49 15.655l-1.272-1.273C6.982 9.618 13.31 7 20.073 7c6.763 0 13.09 2.618 17.854 7.382l-1.272 1.273c-4.437-4.4-10.328-6.837-16.582-6.837-6.255 0-12.146 2.437-16.582 6.837zm29.674 3.527c-7.2-7.2-18.946-7.2-26.146 0l1.273 1.273c6.509-6.51 17.09-6.51 23.6 0l1.273-1.273zm-4.8 4.763c-4.582-4.581-12-4.581-16.582 0l1.273 1.273c3.854-3.854 10.145-3.854 14.036 0l1.273-1.273zm-8.291 8.291l2.872-2.872a4.039 4.039 0 0 0-5.745 0l2.873 2.872z" />
+		</symbol>
+		<symbol id='shower' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="nonzero" d="M36.003 16.307v-5.786c0-.799-.74-1.521-1.539-1.521H24V5c0-.736-.652-1-1.107-1h-5.786C16.63 4 16 4.445 16 5v4H5.536C4.486 9 4 9.522 4 10.521v5.786C4 17.418 4.496 18 5.536 18h28.928c.8 0 1.539-.894 1.539-1.693zM34 16l-27.612.003L6.404 11h10.125c.799 0 1.446-.258 1.446-1.057V6h4.05v3.942c0 .799.647 1.057 1.446 1.057H34v5zM9.5 23.646a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7.333 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7.334 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2.083 5.786a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM3.858 35.217a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6.5 29.432a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm8.25 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-2.732 5.787a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM31.5 23.646a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 5.787a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6.16 5.786a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm8.16 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+		</symbol>
+		<symbol id='meeting-room' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="evenodd" d="M31.213 2.075a.758.758 0 0 0-.754.754c0 .43.323.753.754.753h5.202v5.203c0 .394.323.753.754.753a.758.758 0 0 0 .753-.753V2.829a.736.736 0 0 0-.753-.754h-5.956zm-28.416 0a.736.736 0 0 0-.754.754V8.82c0 .394.323.753.754.753a.758.758 0 0 0 .753-.753V3.582h5.203a.758.758 0 0 0 .753-.753c0-.43-.323-.754-.718-.754H2.797zm13.131.108a.718.718 0 0 0-.287 1.005c.323.61.646 1.22 1.005 1.794.682 1.255 1.4 2.511 2.117 3.731.645 1.148 1.327 2.296 2.009 3.444.323.574.933 1.579 1.363 2.045.503.503-.215 2.333-1.291 2.333H17.22a.758.758 0 0 0-.754.753c0 1.076.36 2.476 1.113 3.23.215.214.25.43.071.645l-1.686.717-4.485 1.938a.837.837 0 0 0-.466.753c.036.323.251.574.61.646.717.144 2.906.646 4.162 1.148.394.144.717.323.86.467.252.25.252.502 0 .717-.322.287-.717.682-.968 1.113-.323.538-.43 1.112-.072 1.65.036.036.036.072.072.108.933 1.076 1.615 1.506 1.615 3.121 0 1.292-.395 2.87-1.938 2.87h-.036a.758.758 0 0 0-.753.754c0 .395.323.753.753.753 2.476 0 3.445-2.188 3.445-4.377 0-2.045-.754-2.69-1.902-4.018.108-.251.574-.682.718-.826.036 0 .036-.035.071-.035.826-.826.826-2.046 0-2.87-.358-.36-1.076-.682-1.865-.97a23.106 23.106 0 0 0-1.687-.502l1.758-.753 2.512-1.077c.108-.035.18-.071.215-.143.825-.825.825-2.045 0-2.87-.323-.323-.502-.897-.61-1.436h2.799c2.332 0 3.875-3.408 2.368-4.88-.323-.322-.897-1.327-1.148-1.757a105.122 105.122 0 0 1-1.974-3.409 425.767 425.767 0 0 1-3.085-5.525.765.765 0 0 0-.647-.388.691.691 0 0 0-.358.101zm12.665 13.885a9.695 9.695 0 0 1 4.844 8.432 9.738 9.738 0 0 1-4.844 8.431l.754 1.292a11.232 11.232 0 0 0 5.597-9.723c0-4.162-2.26-7.786-5.597-9.723l-.754 1.291zm-1.542 2.62c2.009 1.183 3.372 3.336 3.372 5.812a6.71 6.71 0 0 1-3.372 5.812l.753 1.292A8.13 8.13 0 0 0 31.93 24.5a8.13 8.13 0 0 0-4.126-7.104l-.753 1.291zM25.58 21.27a3.754 3.754 0 0 1 1.865 3.229 3.71 3.71 0 0 1-1.865 3.229l.753 1.291a5.173 5.173 0 0 0 2.62-4.52 5.173 5.173 0 0 0-2.62-4.521l-.753 1.292zm-4.126 3.264a2.251 2.251 0 0 0 2.26 2.26 2.25 2.25 0 0 0 2.26-2.26c0-1.291-1.004-2.26-2.26-2.26a2.251 2.251 0 0 0-2.26 2.26zm1.506-.035c0-.395.323-.754.754-.754.395 0 .753.323.753.754a.758.758 0 0 1-.753.753.736.736 0 0 1-.754-.753zm13.455 6.745v5.202h-5.202a.758.758 0 0 0-.754.754c0 .394.323.753.754.753h5.991a.758.758 0 0 0 .754-.753v-5.956c-.036-.43-.359-.754-.79-.754a.758.758 0 0 0-.753.754zm-34.372 0v5.992c0 .394.323.753.754.753h5.991a.758.758 0 0 0 .754-.753c-.036-.43-.359-.79-.754-.79H3.55v-5.202a.758.758 0 0 0-.753-.754.758.758 0 0 0-.754.754z" />
+		</symbol>
+		<symbol id='lecture' width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+					<stop offset="0%" stop-color="#4DDFBF" />
+					<stop offset="100%" stop-color="#31BE9E" />
+				</linearGradient>
+			</defs>
+			<path fill-rule="nonzero" d="M12.634 12.138a2.104 2.104 0 1 0 0-4.209 2.104 2.104 0 0 0-2.105 2.105c.056 1.163.997 2.104 2.105 2.104zm0-3.323c.664 0 1.274.554 1.274 1.274s-.554 1.274-1.274 1.274a1.33 1.33 0 0 1-1.219-1.33c0-.72.554-1.218 1.219-1.218zm25.31-4.652h-.72v10.523h.72v.83H20.333v-.83h16.062V4.163H17.12v6.757h-.83V4.163h-.72v-.83h22.375v.83zm-23.387 33.42l-.829-.052.142-2.266.83.052-.143 2.266zm6.427-.027l-.143-2.267.83-.052.142 2.267-.83.052zm12.253-3.264s.166 1.606.388 3.268l-.831.055a58.427 58.427 0 0 0-.222-3.212c0-.443-.166-.775-.277-.997a1.31 1.31 0 0 0-.775-.664l-1.274-.444-1.55 2.88H27.31l-1.551-2.88-2.16.776c.11.332.166.61.166.941 0 0 .222 1.828.277 3.6l-.83.056a46.656 46.656 0 0 0-.278-3.545c0-.443-.166-.83-.332-1.108-.166-.332-.498-.553-.886-.72l-1.44-.498-1.717 3.157h-1.44L15.403 31.8l-1.44.498c-.388.111-.72.388-.886.72-.166.222-.332.61-.332 1.053 0 .055-.222 1.827-.277 3.6l-.831-.056c.055-1.827.277-3.655.277-3.655 0-.332.055-.61.166-.942l-2.16-.775-1.55 2.88H6.984l-1.551-2.88-1.274.443c-.332.11-.61.388-.775.665-.111.221-.277.554-.277.941 0 .056-.166 1.662-.222 3.268l-.83-.055c.11-1.607.276-3.268.276-3.268 0-.388.111-.886.388-1.33a1.93 1.93 0 0 1 1.218-1.052l1.939-.664 1.661 3.046h.388l1.662-3.046 1.717.609.941-8.695.388.055.388-.055.996 8.086 1.607-.554 1.827 3.378h.443l1.828-3.378 2.105.72c.498.166.941.498 1.218.886l2.936-1.052 1.661 3.046h.388l1.661-3.046 1.939.664c.498.222.941.554 1.218 1.053.277.498.388.941.388 1.384zm-2.517 3.25l-.129-2.046.83-.052.128 2.045-.829.052zm-.142-9.231a2.718 2.718 0 0 1-2.713 2.714 2.718 2.718 0 0 1-2.714-2.714 2.718 2.718 0 0 1 2.714-2.714 2.718 2.718 0 0 1 2.713 2.714zm-4.596 0c0 1.052.83 1.883 1.883 1.883 1.052 0 1.883-.83 1.883-1.883s-.831-1.883-1.883-1.883c-1.053 0-1.883.83-1.883 1.883zM4.825 37.574l-.83-.052.129-2.045.83.052-.129 2.045zm2.88-6.55c-1.496 0-2.714-1.218-2.659-2.658a2.718 2.718 0 0 1 2.714-2.714c.61 0 1.218.222 1.662.61l.11-3.6H8.037V15.24c0-1.662 1.385-3.046 3.046-3.046h.222l1.329 2.437h.221l1.33-2.437h3.157l3.766-3.766.72.72 3.157-3.102.609.61-3.157 3.1.72.72-5.317 5.318h-1.385c-.387.166-.609.498-.609.941l.277 8.696c.499-.388 1.052-.61 1.717-.61a2.837 2.837 0 0 1 2.825 2.825 2.837 2.837 0 0 1-2.825 2.825 2.837 2.837 0 0 1-2.825-2.825c0-.443.111-.83.277-1.218l-.277-9.693c0-.775.443-1.495 1.219-1.772H17.452l4.486-4.486-.83-.83-3.379 3.378h-2.99l-1.33 2.437h-1.218l-1.33-2.437a2.225 2.225 0 0 0-1.993 2.215v6.59h.664l.111-3.932h.83l-.276 9.36c.166.333.221.665.221 1.053a2.718 2.718 0 0 1-2.713 2.714zm10.08-5.316a1.986 1.986 0 0 0-1.994 1.994c0 1.107.886 1.993 1.994 1.993a1.986 1.986 0 0 0 1.993-1.993 1.986 1.986 0 0 0-1.993-1.994zm-10.08.775c-1.053 0-1.883.83-1.883 1.883 0 1.052.83 1.883 1.883 1.883 1.052 0 1.883-.83 1.883-1.883 0-1.052-.831-1.883-1.883-1.883z" />
+		</symbol>
+	</svg>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
