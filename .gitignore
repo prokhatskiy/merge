@@ -1,2 +1,4 @@
 /node_modules/
 /resource/
+*.json
+gulp.js
